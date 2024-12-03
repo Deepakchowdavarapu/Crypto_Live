@@ -1,0 +1,35 @@
+# Ignore virtual environment directories
+venv/
+crypto_env/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore other common files
+*.log
+*.sqlite3
+.DS_Store
+
+# Ignore the JSON file containing sensitive information
+CRYPTO-PROJECT-443509-4D7ED8AAC23E.JSON
+
+# Virtual Environment
+crypto_env/
+
+# Python Files
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE Configurations
+.idea/
+
+# Local or temporary files
+crypto-project-*.json
+Crypto_Live_Data.xlsx
+
+# Environment files
+.env
+# .gitignore
