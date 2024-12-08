@@ -44,6 +44,18 @@ while True:
             'name', 'symbol', 'current_price', 'market_cap', 'total_volume', 'price_change_percentage_24h'
         ])
         print("Data fetched and DataFrame created successfully:")
+        
+        top_5_by_market_cap = df.nlargest(5, 'market_cap')
+        average_price = df['current_price'].mean()
+        highest_24h_change = df['price_change_percentage_24h'].max()
+        lowest_24h_change = df['price_change_percentage_24h'].min()
+
+        print("\nTop 5 cryptocurrencies by market cap:")
+        print(top_5_by_market_cap[['name', 'market_cap']])
+        print(f"\nAverage price of the top 50 cryptocurrencies: ${average_price:.2f}")
+        print(f"\nHighest 24-hour percentage price change: {highest_24h_change:.2f}%")
+        print(f"Lowest 24-hour percentage price change: {lowest_24h_change:.2f}%")
+        
         print(df.head())
         update_gsheet(df, 'Crypto_Live_Data')
     except Exception as e:
